@@ -1,0 +1,20 @@
+﻿<Window x:Class="TMM_WPF.Splot"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Splot" Height="440" Width="625">
+    <Grid>
+        <Canvas HorizontalAlignment="Left" Margin="200,0,0,0" Name="canvasSplot" VerticalAlignment="Top" Width="400" Height="400">
+            <Path Name="GeometrySplot" Stroke="Black">
+                <!--<Path.Data>
+                    <LineGeometry StartPoint="0,0" EndPoint="45,45"></LineGeometry>
+                </Path.Data>-->
+                
+            </Path>
+            <Line Stroke="Black" X1="0" Y1="390" X2="0" Y2="390"></Line>
+        </Canvas>
+        <ListBox Height="198" HorizontalAlignment="Left" Margin="12,12,0,0" Name="listBox1" VerticalAlignment="Top" Width="182" SelectionChanged="listBox1_SelectionChanged">
+            <ListBoxItem Content="Швидкість точки B" />
+            <ListBoxItem Content="Швидкість точки C" />
+        </ListBox>
+    </Grid>
+</Window>

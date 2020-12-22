@@ -1,0 +1,48 @@
+﻿<Window x:Class="TMM_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
+        Height="600" Width="800" Title="Шарнірний чотириланковик">
+    <Grid Height="600" Width="800"> 
+        
+        <Canvas Margin="-1,-1,0,1" Width="800" Height="600" HorizontalAlignment="Left" Name="canvas">
+            <Path Name="PathPlanePosition" Stroke="Black" StrokeThickness="3" Fill="Black"></Path>
+
+
+                <Line Name="LineAB" Stroke="Black" StrokeThickness="3"></Line>
+            <Ellipse Name="A" Fill="White" Stroke="Black" StrokeThickness="1"  Height="10" Width="10"></Ellipse>
+            <Label Name="LabelA"></Label>
+            <Line Name="LineBC" Stroke="Blue" StrokeThickness="3"></Line>
+            <Ellipse Name="B" Fill="White" Stroke="Black" StrokeThickness="1"  Height="10" Width="10"></Ellipse>
+            <Ellipse Name="S2" Fill="Black" Stroke="Black" StrokeThickness="1"  Height="6" Width="6"></Ellipse>
+            <Label Name="LabelB"></Label>
+            <Label Name="LabelS2"></Label>
+            <Line Name="LineCD" Stroke="Black" StrokeThickness="3" ></Line>
+            <Ellipse Name="C" Fill="White" Stroke="Black" StrokeThickness="1"  Height="10" Width="10"></Ellipse>
+            <Ellipse Name="S3" Fill="Black" Stroke="Black" StrokeThickness="1"  Height="6" Width="6"></Ellipse>
+            <Label Name="LabelC"></Label>
+            <Label Name="LabelS3"></Label>
+            <Ellipse Name="D" Fill="White" Stroke="Black" StrokeThickness="1"  Height="10" Width="10"></Ellipse>
+            <Ellipse Name="S4" Fill="Black" Stroke="Black" StrokeThickness="1"  Height="6" Width="6"></Ellipse>
+            <Label Name="LabelD"></Label>
+            <Label Name="LabelS4"></Label>
+            <Button Content="Старт" Height="23" Name="buttonMotion" Width="75" Click="buttonMotion_Click" Canvas.Left="697" Canvas.Top="536" />
+            <Button Canvas.Left="616" Canvas.Top="536" Content="Графік" Height="23" Name="button2" Width="75" Click="button2_Click" />
+            <Label Name="LabelNumberPosition" Margin="650,20,0,0"></Label>
+            <Label Name="LabelOmega" Margin="650,40,0,0"></Label>
+            
+            <Slider Name="SliderScoreOmega" Value="100" Margin="650,60,20,0" Height="23" Canvas.Top="8" Width="122" Maximum="100" DataContext="{Binding}"></Slider>
+            <StackPanel Canvas.Left="578" Canvas.Top="101" Height="145" Name="stackPanel1" Width="194">
+                <Label Content="Швидкість точки В:" Height="28" Name="LabelV_B" />
+                <Label Content="Швидкість точки С:" Height="28" Name="LabelV_C" />
+                <Label Content="Швидкість точки S2:" Height="28" Name="LabelV_S2" />
+                <Label Content="Швидкість точки S3:" Height="28" Name="LabelV_S3" />
+                <Label Content="Швидкість точки S4:" Height="28" Name="LabelV_S4" />
+            </StackPanel>
+            <Button Canvas.Left="535" Canvas.Top="536" Content="Наступний" Height="23" Name="buttonNext" Width="75" Click="buttonNext_Click" />
+            <StackPanel Height="100" Name="stackPanel2" Width="194" Canvas.Left="578" Canvas.Top="324">
+                <CheckBox Content="Показувати вектори швидкості" Height="16" Name="checkBoxIsVisibleVectorVelocity" Checked="checkBoxIsVisibleVectorVelocity_Checked" />
+            </StackPanel>
+        </Canvas>
+    </Grid>
+</Window>
